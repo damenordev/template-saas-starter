@@ -32,7 +32,7 @@ export const AppSidebar = ({ items }: IAppSidebarProps) => {
         <h1 className="flex flex-col items-center gap-0.5">
           <span className="text-xl font-bold leading-none">SaaS</span>
           <span className="text-[10px] bg-primary/25 text-primary px-1.5 py-0.5 rounded-sm uppercase font-medium">
-            started
+            starter
           </span>
         </h1>
       </SidebarHeader>
