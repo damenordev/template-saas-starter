@@ -3,7 +3,8 @@ import { Bell } from 'lucide-react'
 import { ThemeToggle } from '@/theme'
 import { Button } from '@/ui/button'
 import { SidebarTrigger } from '@/ui/sidebar'
-import { I18nSelect } from '@/i18n'
+import { I18nSelect } from '@/lib/i18n'
+import Link from 'next/link'
 
 export interface IAppHeaderProps {
   title?: string
@@ -18,6 +19,9 @@ export const AppHeader = async ({ title, hideSidebarTrigger }: IAppHeaderProps) 
         <h1 className="text-xl font-bold">{title}</h1>
       </div>
       <div className="flex items-center justify-end gap-1">
+        <Link href="/signin">
+          <Button size="sm">Sign In</Button>
+        </Link>
         <I18nSelect />
         <Button variant="ghost" size="icon" className="border hover:bg-card">
           <Bell />

@@ -1,7 +1,7 @@
 import { Button } from '@/ui/button'
 import { Input } from '@/ui/input'
 import { Label } from '@/ui/label'
-import { useTranslations } from '@/i18n'
+import { useTranslations } from '@/lib/i18n'
 
 export const AuthFormSignUp = () => {
   const t = useTranslations('auth')

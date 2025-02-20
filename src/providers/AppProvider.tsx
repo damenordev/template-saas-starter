@@ -1,4 +1,4 @@
-import { I18nProvider, TI18NLocale } from '@/i18n'
+import { I18nProvider, TI18NLocale } from '@/lib/i18n'
 
 export interface IAppProvider {
   children: React.ReactNode

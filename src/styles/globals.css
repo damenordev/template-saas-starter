@@ -7,10 +7,10 @@
     --background: 0 0% 100%;
     --foreground: 0 0% 0%;
 
-    --card: 0 0% 95%;
+    --card: 0 0% 97.5%;
     --card-foreground: 0 0% 0%;
 
-    --popover: 0 0% 90%;
+    --popover: 0 0% 95%;
     --popover-foreground: 0 0% 0%;
 
     /* Purple 600 como primario */
@@ -68,7 +68,7 @@
     --foreground: 0 0% 100%;
     --card: 0 0% 6%;
     --card-foreground: 0 0% 100%;
-    --popover: 0 0% 4%;
+    --popover: 0 0% 8%;
     --popover-foreground: 0 0% 100%;
     --primary: 0 0% 100%;
     --primary-foreground: 0 0% 10%;

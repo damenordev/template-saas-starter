@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Avatar, AvatarImage } from '@/ui/avatar'
 import { Button } from '@/ui/button'
 import { AppHeader } from '@/components'
+import { Logo } from '@/components'
 
 const data = {
   heading: '🚀 Plantilla para el Desarrollo de Aplicaciones SaaS',
@@ -63,61 +64,6 @@ const team = [
       'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80',
   },
 ]
-
-const menuItems = {
-  logo: {
-    src: 'https://www.shadcnblocks.com/images/block/block-1.svg',
-    alt: 'bloques para shadcn/ui',
-    title: 'Shadcnblocks.com',
-    url: 'https://www.shadcnblocks.com',
-  },
-  tagline: 'Componentes hechos fáciles.',
-  menuItems: [
-    {
-      title: 'Producto',
-      links: [
-        { text: 'Descripción general', url: '#' },
-        { text: 'Precios', url: '#' },
-        { text: 'Mercado', url: '#' },
-        { text: 'Características', url: '#' },
-        { text: 'Integraciones', url: '#' },
-        { text: 'Precios', url: '#' },
-      ],
-    },
-    {
-      title: 'Empresa',
-      links: [
-        { text: 'Acerca de', url: '#' },
-        { text: 'Equipo', url: '#' },
-        { text: 'Blog', url: '#' },
-        { text: 'Carreras', url: '#' },
-        { text: 'Contacto', url: '#' },
-        { text: 'Privacidad', url: '#' },
-      ],
-    },
-    {
-      title: 'Recursos',
-      links: [
-        { text: 'Ayuda', url: '#' },
-        { text: 'Ventas', url: '#' },
-        { text: 'Anunciar', url: '#' },
-      ],
-    },
-    {
-      title: 'Social',
-      links: [
-        { text: 'Twitter', url: '#' },
-        { text: 'Instagram', url: '#' },
-        { text: 'LinkedIn', url: '#' },
-      ],
-    },
-  ],
-  copyright: '© 2025 Derechos de autor. Todos los derechos reservados.',
-  bottomLinks: [
-    { text: 'Términos y condiciones', url: '#' },
-    { text: 'Política de privacidad', url: '#' },
-  ],
-}
 
 const features = [
   {
@@ -268,31 +214,11 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-      <footer className="bg-card pt-16">
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 mx-auto max-w-6xl pb-2">
-          {menuItems.menuItems.map((section, sectionIdx) => (
-            <div key={sectionIdx}>
-              <h3 className="mb-4 font-bold">{section.title}</h3>
-              <ul className="space-y-1 text-muted-foreground">
-                {section.links.map((link, linkIdx) => (
-                  <li key={linkIdx} className="font-medium hover:text-primary">
-                    <a href={link.url}>{link.text}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+      <footer className="flex flex-col mx-auto pt-3 pb-1">
+        <div className="flex justify-center">
+          <Logo />
         </div>
-        <div className="mt-8 flex flex-col justify-between gap-4 border-t px-6 py-3 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
-          <p>{menuItems.copyright}</p>
-          <ul className="flex gap-4">
-            {menuItems.bottomLinks.map((link, linkIdx) => (
-              <li key={linkIdx} className="underline hover:text-primary">
-                <a href={link.url}>{link.text}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <p className="mt-2 text-xs text-center">© 2025 Derechos de autor. Todos los derechos reservados.</p>
       </footer>
     </>
   )

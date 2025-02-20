@@ -1,5 +1,5 @@
 import { Button } from '@/ui/button'
-import { useTranslations } from '@/i18n'
+import { useTranslations } from '@/lib/i18n'
 
 export const AuthFormSocials = () => {
   const t = useTranslations('auth')

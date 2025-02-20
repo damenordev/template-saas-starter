@@ -5,10 +5,12 @@ import { ChevronRight } from 'lucide-react'
 
 import { SidebarMenuButton, SidebarMenuItem } from '@/ui/sidebar'
 import { cn } from '@/styles'
-import { TI18NMessages, useTranslations } from '@/i18n'
+import { TI18NMessages, useTranslations } from '@/lib/i18n'
+
+export type TIAppSidebarItemTitle = keyof TI18NMessages['sidebar']['items']
 
 export interface IAppSidebarItemProps {
-  title: keyof TI18NMessages['sidebar']['items']
+  title: TIAppSidebarItemTitle
   icon: React.ReactNode
   url: string
 }

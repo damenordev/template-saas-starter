@@ -1,4 +1,4 @@
-import { intlMiddleware } from '@/i18n'
+import { intlMiddleware } from '@/lib/i18n'
 
 export default intlMiddleware
 
