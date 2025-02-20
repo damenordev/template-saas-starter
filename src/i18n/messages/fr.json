@@ -1,0 +1,36 @@
+{
+  "auth": {
+    "signIn": {
+      "title": "Bienvenue",
+      "noAccount": "Vous n'avez pas de compte ?",
+      "createAccount": "S'inscrire",
+      "button": "Se connecter"
+    },
+    "signUp": {
+      "title": "Créez votre compte sur",
+      "haveAccount": "Vous avez déjà un compte ?",
+      "signIn": "Se connecter",
+      "name": "Nom",
+      "button": "S'inscrire"
+    },
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "passwordError": "Le mot de passe doit comporter au moins 8 caractères",
+    "or": "Ou",
+    "continueWithApple": "Continuer avec Apple",
+    "continueWithGoogle": "Continuer avec Google",
+    "agreeToTerms": "En cliquant sur continuer, vous acceptez nos",
+    "termsOfService": "Conditions d'utilisation",
+    "and": "et",
+    "privacyPolicy": "Politique de confidentialité"
+  },
+  "sidebar": {
+    "items": {
+      "home": "Accueil",
+      "inbox": "Boîte de réception",
+      "calendar": "Calendrier",
+      "search": "Recherche",
+      "settings": "Paramètres"
+    }
+  }
+} 

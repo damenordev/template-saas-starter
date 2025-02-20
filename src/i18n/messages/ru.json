@@ -1,0 +1,36 @@
+{
+  "auth": {
+    "signIn": {
+      "title": "Добро пожаловать",
+      "noAccount": "У вас нет аккаунта?",
+      "createAccount": "Зарегистрироваться",
+      "button": "Войти"
+    },
+    "signUp": {
+      "title": "Создайте свою учетную запись на",
+      "haveAccount": "У вас уже есть аккаунт?",
+      "signIn": "Войти",
+      "name": "Имя",
+      "button": "Зарегистрироваться"
+    },
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "passwordError": "Пароль должен содержать не менее 8 символов",
+    "or": "Или",
+    "continueWithApple": "Продолжить с Apple",
+    "continueWithGoogle": "Продолжить с Google",
+    "agreeToTerms": "Нажимая продолжить, вы соглашаетесь с нашими",
+    "termsOfService": "Условиями использования",
+    "and": "и",
+    "privacyPolicy": "Политикой конфиденциальности"
+  },
+  "sidebar": {
+    "items": {
+      "home": "Главная",
+      "inbox": "Входящие",
+      "calendar": "Календарь",
+      "search": "Поиск",
+      "settings": "Настройки"
+    }
+  }
+} 

@@ -1,0 +1,36 @@
+{
+  "auth": {
+    "signIn": {
+      "title": "欢迎",
+      "noAccount": "没有账户？",
+      "createAccount": "注册",
+      "button": "登录"
+    },
+    "signUp": {
+      "title": "创建您的账户",
+      "haveAccount": "已经有账户？",
+      "signIn": "登录",
+      "name": "姓名",
+      "button": "注册"
+    },
+    "email": "电子邮件",
+    "password": "密码",
+    "passwordError": "密码必须至少包含8个字符",
+    "or": "或者",
+    "continueWithApple": "使用Apple继续",
+    "continueWithGoogle": "使用Google继续",
+    "agreeToTerms": "点击继续即表示您同意我们的",
+    "termsOfService": "服务条款",
+    "and": "和",
+    "privacyPolicy": "隐私政策"
+  },
+  "sidebar": {
+    "items": {
+      "home": "首页",
+      "inbox": "收件箱",
+      "calendar": "日历",
+      "search": "搜索",
+      "settings": "设置"
+    }
+  }
+} 

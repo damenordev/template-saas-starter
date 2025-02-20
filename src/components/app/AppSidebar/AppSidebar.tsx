@@ -1,4 +1,4 @@
-import { LayoutDashboardIcon, ChevronsUpDown } from 'lucide-react'
+import { ChevronsUpDown } from 'lucide-react'
 
 import {
   Sidebar,
@@ -6,13 +6,13 @@ import {
   SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
 } from '@/ui/sidebar'
 import { Avatar, AvatarFallback, AvatarImage } from '@/ui/avatar'
 
 import { AppSidebarItem, IAppSidebarItemProps } from './AppSidebarItem'
+import { Logo } from '@/components/shared'
 
 export interface IAppSidebarProps {
   items: IAppSidebarItemProps[]
@@ -28,17 +28,10 @@ export const AppSidebar = ({ items }: IAppSidebarProps) => {
   return (
     <Sidebar>
       <SidebarHeader className="flex flex-row items-center gap-1 p-4">
-        <LayoutDashboardIcon className="size-11" />
-        <h1 className="flex flex-col items-center gap-0.5">
-          <span className="text-xl font-bold leading-none">SaaS</span>
-          <span className="text-[10px] bg-primary/25 text-primary px-1.5 py-0.5 rounded-sm uppercase font-medium">
-            starter
-          </span>
-        </h1>
+        <Logo />
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map(item => (

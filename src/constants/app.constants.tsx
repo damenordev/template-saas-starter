@@ -9,9 +9,9 @@ export const APP_METADATA: Metadata = {
 }
 
 export const APP_SIDEBAR_ITEMS = [
-  { title: 'Home', url: '/', icon: <Home /> },
-  { title: 'Inbox', url: '/inbox', icon: <Inbox /> },
-  { title: 'Calendar', url: '#', icon: <Calendar /> },
-  { title: 'Search', url: '#', icon: <Search /> },
-  { title: 'Settings', url: '#', icon: <Settings /> },
+  { title: 'home', url: '/', icon: <Home /> },
+  { title: 'inbox', url: '/inbox', icon: <Inbox /> },
+  { title: 'calendar', url: '#', icon: <Calendar /> },
+  { title: 'search', url: '#', icon: <Search /> },
+  { title: 'settings', url: '#', icon: <Settings /> },
 ]

@@ -1,10 +1,13 @@
 import { Button } from '@/ui/button'
+import { useTranslations } from '@/i18n'
 
 export const AuthFormSocials = () => {
+  const t = useTranslations('auth')
+
   return (
     <>
       <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
-        <span className="relative z-10 bg-background px-2 text-muted-foreground">Or</span>
+        <span className="relative z-10 bg-background px-2 text-muted-foreground">{t('or')}</span>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         <Button variant="outline" className="w-full">
@@ -14,7 +17,7 @@ export const AuthFormSocials = () => {
               fill="currentColor"
             />
           </svg>
-          Continue with Apple
+          {t('continueWithApple')}
         </Button>
         <Button variant="outline" className="w-full">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -23,11 +26,12 @@ export const AuthFormSocials = () => {
               fill="currentColor"
             />
           </svg>
-          Continue with Google
+          {t('continueWithGoogle')}
         </Button>
       </div>
-      <div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-primary  ">
-        By clicking continue, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+      <div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-primary">
+        {t('agreeToTerms')}{' '}
+        <a href="#">{t('termsOfService')}</a> {t('and')} <a href="#">{t('privacyPolicy')}</a>.
       </div>
     </>
   )

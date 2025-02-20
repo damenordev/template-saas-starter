@@ -13,7 +13,7 @@ import {
 
 import { changeLocale } from './i18n.actions'
 import { useLocale } from './18n.hooks'
-import { TI18NLocale } from './messages'
+import { I18N_LANGUAGES, TI18NLocale } from './messages'
 
 interface I18nSelectFormProps {
   value: TI18NLocale
@@ -51,8 +51,9 @@ export const I18nSelect = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuRadioGroup value={locale}>
-          <I18nSelectForm value="es" label="Español" />
-          <I18nSelectForm value="en" label="Inglés" />
+          {I18N_LANGUAGES.map(({ label, value }) => (
+            <I18nSelectForm key={value} value={value} label={label} />
+          ))}
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>

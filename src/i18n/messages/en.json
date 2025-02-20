@@ -3,19 +3,38 @@
     "signIn": {
       "title": "Welcome",
       "noAccount": "Don't have an account?",
-      "createAccount": "Register"
+      "createAccount": "Register",
+      "button": "Sign in"
     },
     "signUp": {
       "title": "Create your account in",
       "haveAccount": "Already have an account?",
-      "signIn": "Sign in"
+      "signIn": "Sign in",
+      "name": "Name",
+      "button": "Register"
     },
     "email": "Email",
     "password": "Password",
     "passwordError": "The password must be at least 8 characters",
+    "or": "Or",
+    "continueWithApple": "Continue with Apple",
+    "continueWithGoogle": "Continue with Google",
+    "agreeToTerms": "By clicking continue, you agree to our",
+    "termsOfService": "Terms of Service",
+    "and": "and",
+    "privacyPolicy": "Privacy Policy",
     "button": "Continue",
     "divider": "or",
     "manageAccount": "Manage your account",
     "signOut": "Sign out"
+  },
+  "sidebar": {
+    "items": {
+      "home": "Home",
+      "inbox": "Inbox",
+      "calendar": "Calendar",
+      "search": "Search",
+      "settings": "Settings"
+    }
   }
 }
