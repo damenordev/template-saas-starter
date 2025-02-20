@@ -15,11 +15,12 @@ Welcome to **SaaS Starter**! This project is designed to accelerate the developm
 
 ## KEY FEATURES 🌟
 
-- **Authentication**: Secure and user-friendly authentication implementation using [Auth.js](https://authjs.dev/) with providers like Google and GitHub.
-- **Internationalization**: Support for multiple languages with `next-intl`, allowing easy localization of your application.
-- **Themes**: Toggle between light and dark themes for enhanced user experience.
-- **UI Components**: Utilizes Shadcn UI and Radix UI for a smooth and responsive user interface.
-- **Optimization**: Best practices for performance and Web Vitals optimization, ensuring fast load times and a great user experience.
+- **Autenticación**: Implementación de autenticación segura y fácil de usar utilizando [Auth.js](https://authjs.dev/) con proveedores como Google y GitHub.
+- **Internacionalización**: Soporte para múltiples idiomas con `next-intl`, permitiendo una fácil localización de tu aplicación.
+- **Temas**: Alternar entre temas claros y oscuros para mejorar la experiencia del usuario.
+- **Componentes UI**: Utiliza Shadcn UI y Radix UI para una interfaz de usuario fluida y receptiva.
+- **Optimización**: Mejores prácticas para la optimización del rendimiento y Web Vitals, asegurando tiempos de carga rápidos y una excelente experiencia de usuario.
+- **Modularidad**: Estructura de código modular que facilita la escalabilidad y el mantenimiento de la aplicación.
 
 ## TECHNOLOGICAL STACK 🛠️
 
