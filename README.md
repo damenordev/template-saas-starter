@@ -28,6 +28,7 @@ Welcome to **SaaS Starter**! This project is designed to accelerate the developm
 - **Styles**: [Tailwind CSS](https://tailwindcss.com/)
 - **Internationalization**: [next-intl](https://next-intl.js.org/)
 - **Authentication**: [Auth.js](https://authjs.dev/)
+- **Database Management**: [Prisma](https://www.prisma.io/)
 - **Other Relevant Libraries**: [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
 
 ## QUICK START ⚡
