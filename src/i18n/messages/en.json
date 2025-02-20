@@ -1,0 +1,21 @@
+{
+  "auth": {
+    "signIn": {
+      "title": "Welcome",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Register"
+    },
+    "signUp": {
+      "title": "Create your account in",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "email": "Email",
+    "password": "Password",
+    "passwordError": "The password must be at least 8 characters",
+    "button": "Continue",
+    "divider": "or",
+    "manageAccount": "Manage your account",
+    "signOut": "Sign out"
+  }
+}

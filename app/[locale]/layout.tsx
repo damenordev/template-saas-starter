@@ -1,13 +1,14 @@
-import { ILayout } from '@/types'
+import { ILayoutWithLocale } from '@/types'
 import { cn, fontSans, fontMono } from '@/styles'
 import { AppProvider } from '@/providers'
 import { getTheme } from '@/theme'
 import '@/styles/globals.css'
 
-export default async function RootLayout({ children }: ILayout) {
+export default async function RootLayout({ children, params }: ILayoutWithLocale) {
+  const { locale } = await params
   const theme = await getTheme()
   return (
-    <html>
+    <html lang={locale}>
       <body
         className={cn(
           theme,
@@ -16,7 +17,7 @@ export default async function RootLayout({ children }: ILayout) {
           'relative min-h-screen w-full bg-background text-foreground overflow-x-hidden'
         )}
       >
-        <AppProvider>{children}</AppProvider>
+        <AppProvider locale={locale}>{children}</AppProvider>
       </body>
     </html>
   )
