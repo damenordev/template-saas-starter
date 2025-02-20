@@ -1,7 +1,7 @@
 import { Calendar, Home, Inbox, Search, Settings } from 'lucide-react'
 
-import { AppSidebar } from '@/components'
-import { SidebarProvider, SidebarTrigger } from '@/ui/sidebar'
+import { AppHeader, AppSidebar } from '@/components'
+import { SidebarProvider } from '@/ui/sidebar'
 
 const items = [
   { title: 'Home', url: '/', icon: <Home /> },
@@ -15,8 +15,8 @@ export default function HomePage() {
   return (
     <SidebarProvider>
       <AppSidebar items={items} />
-      <main>
-        <SidebarTrigger />
+      <main className="w-full">
+        <AppHeader />
         Hello World!
       </main>
     </SidebarProvider>

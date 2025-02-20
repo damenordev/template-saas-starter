@@ -21,7 +21,7 @@ export interface IAppSidebarProps {
 const user = {
   name: 'shadcn',
   email: 'm@example.com',
-  avatar: '/avatars/shadcn.jpg',
+  avatar: 'https://github.com/shadcn.png',
 }
 
 export const AppSidebar = ({ items }: IAppSidebarProps) => {
@@ -51,7 +51,7 @@ export const AppSidebar = ({ items }: IAppSidebarProps) => {
       <SidebarFooter>
         <div className="hover:bg-card rounded-lg p-1">
           <div className="flex items-center gap-2 p-0.5 text-left text-sm">
-            <Avatar className="size-10 rounded-lg">
+            <Avatar className="size-8 rounded-lg">
               <AvatarImage src={user.avatar} alt={user.name} />
               <AvatarFallback className="rounded-lg">CN</AvatarFallback>
             </Avatar>
