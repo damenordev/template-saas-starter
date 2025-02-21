@@ -7,11 +7,12 @@
       "button": "Sign in"
     },
     "signUp": {
-      "title": "Create your account in",
+      "title": "Join us and create your account!",
       "haveAccount": "Already have an account?",
       "signIn": "Sign in",
       "name": "Name",
-      "button": "Register"
+      "button": "Register",
+      "alreadyHaveAccount": "Already have an account?"
     },
     "email": "Email",
     "password": "Password",

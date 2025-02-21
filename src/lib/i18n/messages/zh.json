@@ -7,11 +7,12 @@
       "button": "登录"
     },
     "signUp": {
-      "title": "创建您的账户",
+      "title": "加入我们并创建您的账户！",
       "haveAccount": "已经有账户？",
       "signIn": "登录",
       "name": "姓名",
-      "button": "注册"
+      "button": "注册",
+      "alreadyHaveAccount": "已经有账户？"
     },
     "email": "电子邮件",
     "password": "密码",

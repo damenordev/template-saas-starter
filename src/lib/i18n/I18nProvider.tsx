@@ -10,7 +10,6 @@ export interface I18nProviderProps {
 }
 
 export const I18nProvider = async ({ children, locale }: I18nProviderProps) => {
-  console.log('Provider', { locale })
   const messages = await getMessages()
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>

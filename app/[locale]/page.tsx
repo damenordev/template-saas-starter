@@ -5,6 +5,7 @@ import { Avatar, AvatarImage } from '@/ui/avatar'
 import { Button } from '@/ui/button'
 import { AppHeader } from '@/components'
 import { Logo } from '@/components'
+// import { db } from '@/lib/db'
 
 const data = {
   heading: '🚀 Plantilla para el Desarrollo de Aplicaciones SaaS',
@@ -98,7 +99,17 @@ const features = [
   },
 ]
 
-export default function HomePage() {
+export default async function HomePage() {
+  // const result = await db.user.create({
+  //   data: {
+  //     email: 'test@test.com',
+  //     name: 'Test User',
+  //     password: '12345678',
+  //   },
+  // })
+
+  // console.log({ result })
+
   return (
     <>
       <AppHeader hideSidebarTrigger />

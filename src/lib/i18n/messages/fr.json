@@ -7,11 +7,12 @@
       "button": "Se connecter"
     },
     "signUp": {
-      "title": "Créez votre compte sur",
+      "title": "Rejoignez-nous et créez votre compte !",
       "haveAccount": "Vous avez déjà un compte ?",
       "signIn": "Se connecter",
       "name": "Nom",
-      "button": "S'inscrire"
+      "button": "S'inscrire",
+      "alreadyHaveAccount": "Vous avez déjà un compte ?"
     },
     "email": "E-mail",
     "password": "Mot de passe",

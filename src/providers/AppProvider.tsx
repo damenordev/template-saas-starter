@@ -1,3 +1,5 @@
+import { SessionProvider } from 'next-auth/react'
+
 import { I18nProvider, TI18NLocale } from '@/lib/i18n'
 
 export interface IAppProvider {
@@ -6,5 +8,9 @@ export interface IAppProvider {
 }
 
 export const AppProvider: React.FC<IAppProvider> = ({ children, locale }) => {
-  return <I18nProvider locale={locale}>{children}</I18nProvider>
+  return (
+    <SessionProvider>
+      <I18nProvider locale={locale}>{children}</I18nProvider>
+    </SessionProvider>
+  )
 }

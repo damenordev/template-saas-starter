@@ -7,11 +7,12 @@
       "button": "Iniciar sesión"
     },
     "signUp": {
-      "title": "Crea tu cuenta en",
+      "title": "¡Únete a nosotros y crea tu cuenta!",
       "haveAccount": "¿Ya tienes una cuenta?",
       "signIn": "Iniciar sesión",
       "name": "Nombre",
-      "button": "Registrarse"
+      "button": "Registrarse",
+      "alreadyHaveAccount": "¿Ya tienes una cuenta?"
     },
     "email": "Correo electrónico",
     "password": "Contraseña",

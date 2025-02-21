@@ -2,10 +2,14 @@ import Link from 'next/link'
 
 import { cn } from '@/styles'
 import { AuthFormSignIn, AuthFormSocials, Logo } from '@/components'
-import { useTranslations } from '@/lib/i18n'
+import { auth } from '@/lib/auth/auth.config'
+import { getTranslations } from '@/lib/i18n'
 
-export default function SignInPage() {
-  const t = useTranslations('auth.signIn')
+export default async function SignInPage() {
+  const session = await auth()
+  console.log({ session })
+
+  const t = await getTranslations('auth.signIn')
 
   return (
     <section className={cn('max-w-xl mx-auto flex flex-col gap-6 pt-8 animate-fade-in')}>
