@@ -7,7 +7,7 @@ import { ArrowUpRight, Users, DollarSign, LineChart, Activity, Calendar, BarChar
 
 export default function DashboardPage() {
   return (
-    <SidebarProvider>
+    <>
       <AppSidebar items={APP_SIDEBAR_ITEMS} />
       <main className="w-full p-6">
         <AppHeader />
@@ -194,6 +194,6 @@ export default function DashboardPage() {
           </div>
         </div>
       </main>
-    </SidebarProvider>
+    </>
   )
 }
