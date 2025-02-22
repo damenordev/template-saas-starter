@@ -1,9 +1,10 @@
 # Stripe Integration Documentation
 
 ## Purpose
-- Document Stripe payment integration patterns and workflows
-- Enable automated payment processing and subscription management
-- Maintain secure handling of payment information
+- Document Stripe payment integration patterns and workflows using React Server Components
+- Enable automated payment processing and subscription management with Server Actions
+- Maintain secure handling of payment information through server-side operations
+- Optimize performance with server-side rendering patterns
 
 ## Required Components
 

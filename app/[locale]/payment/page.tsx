@@ -1,40 +1,43 @@
-'use client'
-
-import { useEffect, useState } from 'react'
 import { PaymentProvider } from '@/components/payments/PaymentProvider'
 import { PaymentForm } from '@/components/payments/PaymentForm'
+import { AppHeader } from '@/components/app/AppHeader'
+import { createPaymentIntent } from './actions'
 
-export default function PaymentPage() {
-  const [clientSecret, setClientSecret] = useState('')
-
-  useEffect(() => {
-    // Create a payment intent when the page loads
-    fetch('/api/stripe/create-payment-intent', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        amount: 2000, // $20.00 in cents
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => setClientSecret(data.clientSecret))
-      .catch((error) => console.error('Error:', error))
-  }, [])
+export default async function PaymentPage() {
+  const clientSecret = await createPaymentIntent(2000)
 
   if (!clientSecret) {
-    return <div>Loading...</div>
+    return (
+      <div className="min-h-screen flex items-center justify-center dark:bg-gray-900">
+        <div className="animate-pulse flex space-x-4">
+          <div className="h-12 w-12 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+          <div className="space-y-4">
+            <div className="h-4 w-20 bg-gray-200 dark:bg-gray-700 rounded"></div>
+            <div className="h-4 w-24 bg-gray-200 dark:bg-gray-700 rounded"></div>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-2xl font-bold mb-8">Test Payment</h1>
-      <div className="bg-white p-6 rounded-lg shadow-md">
-        <PaymentProvider clientSecret={clientSecret}>
-          <PaymentForm />
-        </PaymentProvider>
-      </div>
+    <div className="min-h-screen bg-background">
+      <AppHeader title="Payment" hideSidebarTrigger />
+      <main className="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-lg mx-auto space-y-8">
+          <div className="text-center">
+            <h1 className="text-3xl font-extrabold text-foreground sm:text-4xl">Complete Your Payment</h1>
+            <p className="mt-4 text-lg text-muted-foreground">Secure payment processing powered by Stripe</p>
+          </div>
+          <div className="bg-card text-card-foreground shadow-lg rounded-lg border">
+            <div className="p-8">
+              <PaymentProvider clientSecret={clientSecret}>
+                <PaymentForm />
+              </PaymentProvider>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   )
 }
