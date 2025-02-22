@@ -1,6 +1,5 @@
 import { APP_SIDEBAR_ITEMS } from '@/constants'
 import { AppHeader, AppSidebar } from '@/components'
-import { Sidebar as SidebarProvider } from '@/ui/sidebar'
 import { Card } from '@/ui/card'
 import { Button } from '@/ui/button'
 import { ArrowUpRight, Users, DollarSign, LineChart, Activity, Calendar, BarChart } from 'lucide-react'

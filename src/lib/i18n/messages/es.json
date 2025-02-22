@@ -31,24 +31,8 @@
       "inbox": "Bandeja de entrada",
       "calendar": "Calendario",
       "search": "Buscar",
-      "settings": "Configuraciones"
-    }
-  },
-  "payment": {
-    "completePayment": "Completa tu pago",
-    "securePayment": "Procesamiento de pago seguro con Stripe",
-    "orderSummary": "Resumen del pedido",
-    "premiumPlan": "Plan Premium",
-    "annualSubscription": "Suscripción Anual",
-    "subtotal": "Subtotal",
-    "tax": "Impuestos",
-    "total": "Total",
-    "includedBenefits": "Beneficios incluidos",
-    "benefits": {
-      "unlimited": "Acceso ilimitado",
-      "support": "Soporte prioritario",
-      "analytics": "Análisis avanzado",
-      "integrations": "Integraciones premium"
+      "settings": "Configuraciones",
+      "chat": "Chat"
     },
     "paymentSuccess": "Pago Exitoso",
     "thankYou": "¡Gracias por tu compra!",

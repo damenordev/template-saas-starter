@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { Home, Inbox, Calendar, Search, Settings } from 'lucide-react'
+import { Home, Inbox, Calendar, Search, Settings, MessageCircle } from 'lucide-react'
 
 import { IAppSidebarItemProps } from '@/components'
 
@@ -13,6 +13,7 @@ export const APP_METADATA: Metadata = {
 export const APP_SIDEBAR_ITEMS: IAppSidebarItemProps[] = [
   { title: 'home', url: '/', icon: <Home /> },
   { title: 'inbox', url: '/inbox', icon: <Inbox /> },
+  { title: 'chat', url: '/chat', icon: <MessageCircle /> },
   { title: 'calendar', url: '#', icon: <Calendar /> },
   { title: 'search', url: '#', icon: <Search /> },
   { title: 'settings', url: '#', icon: <Settings /> },
