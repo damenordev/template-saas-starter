@@ -33,5 +33,22 @@
       "search": "Recherche",
       "settings": "Paramètres"
     }
+  },
+  "payment": {
+    "completePayment": "Finalisez votre paiement",
+    "securePayment": "Paiement sécurisé propulsé par Stripe",
+    "orderSummary": "Résumé de la commande",
+    "premiumPlan": "Plan Premium",
+    "annualSubscription": "Abonnement Annuel",
+    "subtotal": "Sous-total",
+    "tax": "TVA",
+    "total": "Total",
+    "includedBenefits": "Avantages inclus",
+    "benefits": {
+      "unlimited": "Accès illimité",
+      "support": "Support prioritaire",
+      "analytics": "Analyses avancées",
+      "integrations": "Intégrations premium"
+    }
   }
-} 
+}

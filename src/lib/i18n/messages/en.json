@@ -37,5 +37,22 @@
       "search": "Search",
       "settings": "Settings"
     }
+  },
+  "payment": {
+    "completePayment": "Complete Your Payment",
+    "securePayment": "Secure payment processing powered by Stripe",
+    "orderSummary": "Order Summary",
+    "premiumPlan": "Premium Plan",
+    "annualSubscription": "Annual Subscription",
+    "subtotal": "Subtotal",
+    "tax": "Tax",
+    "total": "Total",
+    "includedBenefits": "Included Benefits",
+    "benefits": {
+      "unlimited": "Unlimited Access",
+      "support": "Priority Support",
+      "analytics": "Advanced Analytics",
+      "integrations": "Premium Integrations"
+    }
   }
 }
