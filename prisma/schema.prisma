@@ -18,6 +18,7 @@ model User {
   sessions      Session[]
   // Optional for WebAuthn support
   Authenticator Authenticator[]
+  customer      Customer?
  
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -76,4 +77,24 @@ model Authenticator {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
  
   @@id([userId, credentialID])
+}
+
+model Customer {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  stripeCustomerId String @unique
+  user      User     @relation(fields: [userId], references: [id])
+  subscriptions Subscription[]
+}
+
+model Subscription {
+  id        String   @id @default(cuid())
+  customerId String
+  customer  Customer @relation(fields: [customerId], references: [id])
+  stripeSubscriptionId String @unique
+  status    String
+  priceId   String
+  quantity  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
