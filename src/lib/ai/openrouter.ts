@@ -17,7 +17,7 @@ export interface ChatMessage {
 export async function sendChatMessage(messages: ChatMessage[]) {
   try {
     const completion = await openai.chat.completions.create({
-      model: 'deepseek/deepseek-r1:free',
+      model: 'google/gemini-2.0-pro-exp-02-05:free',
       messages,
     });
 

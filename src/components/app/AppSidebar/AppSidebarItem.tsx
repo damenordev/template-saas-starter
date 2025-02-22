@@ -27,7 +27,7 @@ export const AppSidebarItem: React.FC<IAppSidebarItemProps> = ({ icon, title, ur
           'bg-primary/15 text-primary rounded-sm hover:bg-primary/20 hover:text-primary': isActive,
         })}
       >
-        <Link href={url}>
+        <Link href={`/dashboard${url}`}>
           {icon}
           <span className="flex-1 font-medium">{t(title)}</span>
           {isActive ? <div className="size-2 rounded-full bg-primary/30" /> : <ChevronRight className="size-5 -mr-1" />}
