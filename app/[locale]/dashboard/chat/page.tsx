@@ -1,9 +1,5 @@
-import { Send, Bot, User } from 'lucide-react'
-
 import { APP_SIDEBAR_ITEMS } from '@/constants'
-import { AppHeader, AppSidebar } from '@/components'
-import { Button } from '@/ui/button'
-import { Input } from '@/ui/input'
+import { AppHeader, AppSidebar, ChatInterface } from '@/components'
 
 export default function ChatPage() {
   return (
@@ -11,10 +7,8 @@ export default function ChatPage() {
       <AppSidebar items={APP_SIDEBAR_ITEMS} />
       <main className="w-full">
         <AppHeader />
-        <div className="h-[calc(100vh-5rem)] max-w-4xl mx-auto flex flex-col pb-4">
-          {/* Chat Messages Area */}
+        {/* <div className="h-[calc(100vh-5rem)] max-w-4xl mx-auto flex flex-col pb-4">
           <div className="flex-1 overflow-y-auto space-y-6 scrollbar-thin scrollbar-thumb-primary/10 scrollbar-track-transparent hover:scrollbar-thumb-primary/20">
-            {/* AI Message */}
             <div className="flex items-start gap-1 max-w-3xl animate-in fade-in-50 duration-300">
               <span className="p-1 rounded-xl text-foreground">
                 <Bot />
@@ -31,7 +25,6 @@ export default function ChatPage() {
               </div>
             </div>
 
-            {/* User Message */}
             <div className="flex justify-end items-start gap-1 max-w-3xl ml-auto animate-in fade-in-50 duration-300">
               <div className="flex flex-col gap-1">
                 <div className="bg-foreground p-3 rounded-xl rounded-tr-none text-background shadow-sm">
@@ -44,7 +37,6 @@ export default function ChatPage() {
             </div>
           </div>
 
-          {/* Input Area */}
           <form className="relative w-full gap-2">
             <Input
               placeholder="Pregunta lo que quieras"
@@ -58,7 +50,8 @@ export default function ChatPage() {
               <Send />
             </Button>
           </form>
-        </div>
+        </div> */}
+        <ChatInterface />
       </main>
     </>
   )
