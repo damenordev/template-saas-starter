@@ -187,6 +187,86 @@ export default async function HomePage() {
             </div>
           ))}
         </section>
+        <section className="container py-24 lg:py-32 relative overflow-hidden">
+          <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14 relative">
+            <span className="px-3 py-1 text-sm font-medium bg-primary/10 text-primary rounded-full inline-block mb-4">Precios</span>
+            <h2 className="text-4xl font-bold md:text-5xl md:leading-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">Planes y Precios</h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Elige el plan perfecto para tus necesidades
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Free Plan */}
+            <div className="group relative flex flex-col h-full p-8 bg-card/50 backdrop-blur-sm text-card-foreground rounded-2xl border border-border/50 hover:border-primary/60 hover:shadow-lg transition-all duration-300 ease-in-out">
+              <div className="space-y-2">
+                <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">Gratis</h3>
+                <p className="text-muted-foreground">Perfecto para empezar</p>
+              </div>
+              <div className="mt-4 flex items-baseline text-5xl font-bold">
+                $0<span className="ml-1 text-lg font-normal text-muted-foreground">/mes</span>
+              </div>
+              <ul className="mt-8 space-y-4 flex-grow">
+                {['5 proyectos', '2GB almacenamiento', 'API básica', 'Soporte comunitario'].map((feature) => (
+                  <li key={feature} className="flex items-center gap-3 text-sm">
+                    <svg className="h-5 w-5 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Button size="lg" variant="outline" className="mt-8 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">Comenzar Gratis</Button>
+            </div>
+
+            {/* Pro Plan */}
+            <div className="group relative flex flex-col h-full p-8 bg-card text-card-foreground rounded-2xl border-2 border-primary shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out scale-105">
+              <div className="absolute -top-5 left-0 right-0 mx-auto w-fit">
+                <span className="bg-primary text-primary-foreground text-sm font-medium px-4 py-1.5 rounded-full shadow-sm">Popular</span>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">Pro</h3>
+                <p className="text-muted-foreground">Para equipos en crecimiento</p>
+              </div>
+              <div className="mt-4 flex items-baseline text-5xl font-bold">
+                $29<span className="ml-1 text-lg font-normal text-muted-foreground">/mes</span>
+              </div>
+              <ul className="mt-8 space-y-4 flex-grow">
+                {['Proyectos ilimitados', '50GB almacenamiento', 'API avanzada', 'Soporte prioritario', 'Análisis avanzado'].map((feature) => (
+                  <li key={feature} className="flex items-center gap-3 text-sm">
+                    <svg className="h-5 w-5 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Button size="lg" className="mt-8 shadow-sm hover:shadow-md transition-shadow">Comenzar con Pro</Button>
+            </div>
+
+            {/* Enterprise Plan */}
+            <div className="group relative flex flex-col h-full p-8 bg-card/50 backdrop-blur-sm text-card-foreground rounded-2xl border border-border/50 hover:border-primary/60 hover:shadow-lg transition-all duration-300 ease-in-out">
+              <div className="space-y-2">
+                <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">Empresa</h3>
+                <p className="text-muted-foreground">Para grandes organizaciones</p>
+              </div>
+              <div className="mt-4 flex items-baseline text-5xl font-bold">
+                $99<span className="ml-1 text-lg font-normal text-muted-foreground">/mes</span>
+              </div>
+              <ul className="mt-8 space-y-4 flex-grow">
+                {['Todo en Pro', 'Almacenamiento ilimitado', 'API personalizada', 'SLA garantizado', 'Soporte 24/7', 'Implementación dedicada'].map((feature) => (
+                  <li key={feature} className="flex items-center gap-3 text-sm">
+                    <svg className="h-5 w-5 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Button size="lg" variant="outline" className="mt-8 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">Contactar Ventas</Button>
+            </div>
+          </div>
+        </section>
+
         <section className="container py-24 lg:py-32">
           <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
             <h2 className="text-3xl font-bold md:text-4xl md:leading-tight">Nuestro Equipo de Desarrollo</h2>
@@ -225,12 +305,15 @@ export default async function HomePage() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col mx-auto pt-3 pb-1">
+      <footer className="relative flex flex-col mx-auto pt-3 pb-1">
         <div className="flex justify-center">
           <Logo />
         </div>
         <p className="mt-2 text-xs text-center">© 2025 Derechos de autor. Todos los derechos reservados.</p>
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" /> */}
       </footer>
+      {/* <div className="fixed inset-0 -z-10 h-full min-h-screen w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] dark:bg-gray-950 dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] opacity-20"></div> */}
     </>
   )
 }
+
