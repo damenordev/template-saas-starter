@@ -62,6 +62,16 @@
     "status": "Status",
     "confirmed": "Confirmed",
     "viewDashboard": "View Dashboard",
-    "getSupport": "Get Support"
+    "getSupport": "Get Support",
+    "paymentFailed": "Payment Failed",
+    "paymentErrorMessage": "We were unable to process your payment. Please try again or contact support.",
+    "errorDetails": "Error Details",
+    "errorCode": "Error Code",
+    "failed": "Failed",
+    "suggestion": "Suggestion",
+    "tryAgainLater": "Please try again later or contact our support team for assistance.",
+    "tryAgain": "Try Again",
+    "oops": "Oops!",
+    "friendlyErrorMessage": "Something went wrong with your payment. Don't worry, no charges were made. Let's try that again!"
   }
 }

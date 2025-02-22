@@ -58,6 +58,16 @@
     "status": "Estado",
     "confirmed": "Confirmado",
     "viewDashboard": "Ver Panel",
-    "getSupport": "Obtener Ayuda"
+    "getSupport": "Obtener Ayuda",
+    "paymentFailed": "Pago Fallido",
+    "paymentErrorMessage": "No pudimos procesar tu pago. Por favor, inténtalo de nuevo o contacta a soporte.",
+    "errorDetails": "Detalles del Error",
+    "errorCode": "Código de Error",
+    "failed": "Fallido",
+    "suggestion": "Sugerencia",
+    "tryAgainLater": "Por favor, inténtalo de nuevo más tarde o contacta a nuestro equipo de soporte para obtener ayuda.",
+    "tryAgain": "Intentar de Nuevo",
+    "oops": "¡Ups!",
+    "friendlyErrorMessage": "Algo salió mal con tu pago. No te preocupes, no se realizaron cargos. ¡Intentémoslo de nuevo!"
   }
 }

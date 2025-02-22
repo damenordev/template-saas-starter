@@ -37,6 +37,12 @@
   "payment": {
     "completePayment": "完成支付",
     "securePayment": "由Stripe提供安全支付处理",
+    "oops": "抱歉！",
+    "failed": "支付失败",
+    "friendlyErrorMessage": "我们无法处理您的支付。请重试或联系客服。",
+    "tryAgainLater": "请稍后重试",
+    "tryAgain": "重试",
+    "getSupport": "获取帮助",
     "orderSummary": "订单摘要",
     "premiumPlan": "高级计划",
     "annualSubscription": "年度订阅",
@@ -57,7 +63,6 @@
     "amount": "金额",
     "status": "状态",
     "confirmed": "已确认",
-    "viewDashboard": "查看仪表盘",
-    "getSupport": "获取支持"
+    "viewDashboard": "查看仪表盘"
   }
 }

@@ -37,6 +37,12 @@
   "payment": {
     "completePayment": "Finalisez votre paiement",
     "securePayment": "Paiement sécurisé propulsé par Stripe",
+    "oops": "Oups !",
+    "failed": "Échec",
+    "friendlyErrorMessage": "Nous n'avons pas pu traiter votre paiement. Veuillez réessayer ou contacter le support.",
+    "tryAgainLater": "Veuillez réessayer plus tard",
+    "tryAgain": "Réessayer",
+    "getSupport": "Obtenir de l'aide",
     "orderSummary": "Résumé de la commande",
     "premiumPlan": "Plan Premium",
     "annualSubscription": "Abonnement Annuel",
@@ -57,7 +63,6 @@
     "amount": "Montant",
     "status": "Statut",
     "confirmed": "Confirmé",
-    "viewDashboard": "Voir le Tableau de Bord",
-    "getSupport": "Obtenir de l'Aide"
+    "viewDashboard": "Voir le Tableau de Bord"
   }
 }
