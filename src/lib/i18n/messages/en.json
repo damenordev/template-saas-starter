@@ -53,6 +53,15 @@
       "support": "Priority Support",
       "analytics": "Advanced Analytics",
       "integrations": "Premium Integrations"
-    }
+    },
+    "paymentSuccess": "Payment Successful",
+    "thankYou": "Thank you for your purchase!",
+    "orderDetails": "Order Details",
+    "plan": "Plan",
+    "amount": "Amount",
+    "status": "Status",
+    "confirmed": "Confirmed",
+    "viewDashboard": "View Dashboard",
+    "getSupport": "Get Support"
   }
 }

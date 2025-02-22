@@ -49,6 +49,15 @@
       "support": "Support prioritaire",
       "analytics": "Analyses avancées",
       "integrations": "Intégrations premium"
-    }
+    },
+    "paymentSuccess": "Paiement Réussi",
+    "thankYou": "Merci pour votre achat !",
+    "orderDetails": "Détails de la commande",
+    "plan": "Plan",
+    "amount": "Montant",
+    "status": "Statut",
+    "confirmed": "Confirmé",
+    "viewDashboard": "Voir le Tableau de Bord",
+    "getSupport": "Obtenir de l'Aide"
   }
 }

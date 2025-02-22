@@ -49,6 +49,15 @@
       "support": "优先支持",
       "analytics": "高级分析",
       "integrations": "高级集成"
-    }
+    },
+    "paymentSuccess": "支付成功",
+    "thankYou": "感谢您的购买！",
+    "orderDetails": "订单详情",
+    "plan": "计划",
+    "amount": "金额",
+    "status": "状态",
+    "confirmed": "已确认",
+    "viewDashboard": "查看仪表盘",
+    "getSupport": "获取支持"
   }
 }
