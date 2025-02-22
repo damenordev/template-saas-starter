@@ -1,0 +1,49 @@
+[deployment.txt]
+
+PURPOSE:
+- Document deployment configurations and CI/CD processes
+- Enable AI tools to manage deployment workflows safely
+
+TARGET AUDIENCE:
+- Primary AI: Cursor, GitHub Copilot
+- Secondary AI: CI/CD automation bots
+
+REQUIRED SECTIONS:
+
+1. CONTEXT MAP:
+   - Related Files:
+     - next.config.ts: Next.js configuration
+     - package.json: Build scripts and dependencies
+     - .env: Environment variables template
+   - Dependencies:
+     - next.js
+     - prisma
+     - stripe
+
+2. DEPLOYMENT PATTERNS:
+   - Build Process:
+     - Development: npm run dev
+     - Production: npm run build && npm start
+     - Database: prisma migrate deploy
+   - Environment Setup:
+     - Required Variables: DATABASE_URL, STRIPE_SECRET_KEY
+     - Optional Variables: ANALYTICS_ID
+
+3. MODIFICATION RULES:
+   - When updating dependencies:
+     1. Update package.json
+     2. Run npm install
+     3. Test in development environment
+     4. Update documentation if APIs change
+   - When deploying database changes:
+     1. Run prisma generate
+     2. Test migrations locally
+     3. Deploy migrations to production
+   - Common errors to avoid:
+     - Incorrect: Deploying without environment variables
+     - Correct: Verify all required variables are set
+     - Incorrect: Skipping database migrations
+     - Correct: Run migrations before deployment
+   - Files to delete:
+     - Remove .env.local after copying to .env
+     - Clean up old build artifacts

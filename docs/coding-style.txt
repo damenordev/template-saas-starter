@@ -1,0 +1,54 @@
+[coding-style.txt]
+
+PURPOSE:
+- Document coding conventions and patterns for consistent code quality
+- Enable AI tools to maintain code style across the project
+
+TARGET AUDIENCE:
+- Primary AI: Cursor, GitHub Copilot
+- Secondary AI: Linting and formatting bots
+
+REQUIRED SECTIONS:
+
+1. CONTEXT MAP:
+   - Related Files:
+     - .prettierrc: Prettier configuration
+     - eslint.config.mjs: ESLint configuration
+     - tsconfig.json: TypeScript configuration
+   - Dependencies:
+     - prettier
+     - eslint
+     - typescript
+
+2. CODING PATTERNS:
+   - File Organization:
+     - Components: src/components/{shared,app,auth,payments}
+     - Hooks: src/hooks/*.tsx
+     - Constants: src/constants/*.ts
+     - Types: src/types/*.ts
+   - Naming Conventions:
+     - Components: PascalCase (e.g., AuthButton.tsx)
+     - Hooks: camelCase with 'use' prefix (e.g., useAuth.ts)
+     - Constants: UPPER_SNAKE_CASE
+     - Types/Interfaces: PascalCase with type suffix
+
+3. MODIFICATION RULES:
+   - When adding new components:
+     1. Place in appropriate src/components subdirectory
+     2. Export via src/components/index.ts
+     3. Follow component structure pattern:
+        - Props interface at top
+        - Component function
+        - Export statement
+   - When creating hooks:
+     1. Place in src/hooks directory
+     2. Export via src/hooks/index.ts
+     3. Include proper TypeScript types
+   - Common errors to avoid:
+     - Incorrect: Mixing default and named exports
+     - Correct: Consistent export pattern across files
+     - Incorrect: Inconsistent file naming
+     - Correct: Follow established naming conventions
+   - Files to delete:
+     - Remove any .js files when converting to TypeScript
+     - Clean up unused style files

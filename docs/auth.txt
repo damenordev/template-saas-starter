@@ -1,0 +1,65 @@
+[auth.txt]
+
+PURPOSE:
+- Document authentication flows and patterns using Auth.js
+- Enable AI tools to modify authentication safely and consistently
+
+TARGET AUDIENCE:
+- Primary AI: Cursor, GitHub Copilot
+- Secondary AI: CI/CD security bots
+
+REQUIRED SECTIONS:
+
+1. CONTEXT MAP:
+   - Related Files:
+     - app/api/auth/[...nextauth]/route.ts: Main Auth.js configuration
+     - src/lib/auth/: Authentication utilities and helpers
+     - src/components/auth/: Authentication-related components
+   - Dependencies:
+     - @auth/core
+     - @auth/prisma-adapter
+     - @prisma/client
+
+2. CODING PATTERNS:
+   - Authentication Flow:
+     - Route Handler: app/api/auth/[...nextauth]/route.ts
+     - Protected Routes: app/[locale]/(auth)/*
+     - Auth Components: src/components/auth/*.tsx
+   - Session Management:
+     - Server-side: Using Auth.js session hooks
+     - Client-side: Using Auth.js React hooks
+
+3. MODIFICATION RULES:
+   - When adding new auth provider:
+     1. Update route.ts with provider configuration
+     2. Add environment variables in .env
+     3. Update Prisma schema if needed
+     4. Run prisma generate if schema changed
+   - When protecting routes:
+     1. Place under app/[locale]/(auth)/
+     2. Use middleware.ts for protection
+   - Common errors to avoid:
+     - Incorrect: Accessing session without proper hooks
+     - Correct: Use getServerSession or useSession hooks
+   - Files to delete:
+     - Remove old auth implementations when migrating
+     - Clean up unused provider configurations
+
+4. AI-SPECIFIC METADATA:
+   - Feature Tags: #authentication #security #auth-js #prisma
+   - Key Files Hash Map:
+     - app/api/auth/[...nextauth]/route.ts: Auth configuration
+     - middleware.ts: Route protection
+     - src/lib/auth/: Auth utilities
+
+REALISTIC EXAMPLE:
+User request: "Add GitHub authentication"
+1. Update app/api/auth/[...nextauth]/route.ts:
+   - Add GitHubProvider
+   - Configure callbacks
+2. Add to .env:
+   - GITHUB_ID
+   - GITHUB_SECRET
+3. Update Prisma schema if needed
+4. Add GitHub login button component
+5. Delete any old GitHub auth implementations

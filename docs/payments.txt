@@ -1,0 +1,63 @@
+[payments.txt]
+
+PURPOSE:
+- Document payment system integration with Stripe
+- Enable AI tools to safely modify payment flows and handle transactions
+
+TARGET AUDIENCE:
+- Primary AI: Cursor, GitHub Copilot
+- Secondary AI: CI/CD payment verification bots
+
+REQUIRED SECTIONS:
+
+1. CONTEXT MAP:
+   - Related Files:
+     - app/api/stripe/: Stripe API endpoints
+     - src/lib/stripe/: Stripe utilities and helpers
+     - src/components/payments/: Payment-related components
+   - Dependencies:
+     - stripe
+     - @stripe/stripe-js
+     - @prisma/client
+
+2. CODING PATTERNS:
+   - Payment Flow:
+     - API Routes: app/api/stripe/*.ts
+     - Client Components: src/components/payments/*.tsx
+     - Database Schema: prisma/schema.prisma (subscription models)
+   - Subscription Management:
+     - Webhook Handling: app/api/stripe/webhook/route.ts
+     - Customer Portal: src/components/payments/portal.tsx
+
+3. MODIFICATION RULES:
+   - When adding new payment feature:
+     1. Update Stripe API configuration
+     2. Add environment variables in .env
+     3. Update Prisma schema for new payment models
+     4. Run prisma generate after schema changes
+   - When handling webhooks:
+     1. Add webhook handler in app/api/stripe/webhook/
+     2. Configure webhook secret in .env
+     3. Test with Stripe CLI
+   - Common errors to avoid:
+     - Incorrect: Handling sensitive payment data on client
+     - Correct: Process all payments server-side
+   - Files to delete:
+     - Remove old payment implementations when updating
+     - Clean up unused Stripe product configurations
+
+4. AI-SPECIFIC METADATA:
+   - Feature Tags: #payments #stripe #subscriptions
+   - Key Files Hash Map:
+     - app/api/stripe/: Payment endpoints
+     - src/lib/stripe/: Payment utilities
+     - prisma/schema.prisma: Payment models
+
+REALISTIC EXAMPLE:
+User request: "Add new subscription plan"
+1. Update Stripe dashboard with new price
+2. Add price ID to environment variables
+3. Update subscription model in schema.prisma
+4. Create new payment button component
+5. Add webhook handler for new plan
+6. Delete old plan configurations if replacing

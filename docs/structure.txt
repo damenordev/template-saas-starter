@@ -1,0 +1,64 @@
+[structure.txt]
+
+PURPOSE:
+- Document the project's structure, dependencies, and module organization
+- Enable AI tools to understand the project layout and make informed modifications
+
+TARGET AUDIENCE:
+- Primary AI: Cursor, GitHub Copilot
+- Secondary AI: CI/CD automation tools
+
+REQUIRED SECTIONS:
+
+1. CONTEXT MAP:
+   - Project Root: package.json, next.config.ts, tsconfig.json
+   - Core Directories:
+     - app/[locale]: Main application routes and pages
+     - src/components: Reusable UI components
+     - src/lib: Core functionality modules
+     - src/ui: Shadcn UI components
+     - prisma: Database schema and migrations
+   - Dependencies:
+     - next.js@15.x
+     - react@latest
+     - shadcn/ui
+     - prisma
+     - next-intl
+     - auth.js
+
+2. CODING PATTERNS:
+   - App Router Pattern: app/[locale]/page.tsx for internationalized routes
+   - Component Organization: src/components/{shared,app,auth,payments}
+   - UI Components: src/ui/*.tsx following shadcn/ui patterns
+   - Providers: src/providers/AppProvider.tsx for global state
+
+3. MODIFICATION RULES:
+   - When adding new routes:
+     1. Create under app/[locale]/{route}
+     2. Include page.tsx and necessary components
+     3. Update navigation if required
+   - When adding new components:
+     1. Place in appropriate src/components subdirectory
+     2. Export via src/components/index.ts
+     3. Follow existing naming conventions
+   - Common errors to avoid:
+     - Incorrect: Placing pages outside [locale] directory
+     - Correct: Always nest routes under [locale] for i18n support
+   - Files to delete: Remove any route components not under [locale]
+
+4. AI-SPECIFIC METADATA:
+   - Project Type: #saas #next #react #typescript
+   - Key Directories Hash Map:
+     - app/[locale]: For routes and pages
+     - src/components: For reusable components
+     - src/lib: For core functionality
+     - src/ui: For UI components
+     - prisma: For database schema
+
+REALISTIC EXAMPLE:
+User request: "Add a new dashboard feature"
+1. Create app/[locale]/dashboard/page.tsx
+2. Add components in src/components/app/dashboard/
+3. Update navigation menu
+4. Export components through index.ts
+5. Delete any old dashboard implementations outside [locale]

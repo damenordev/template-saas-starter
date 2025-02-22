@@ -1,0 +1,90 @@
+[ui-ux.txt]
+
+PURPOSE:
+- Document UI/UX patterns and theme configuration
+- Enable consistent styling and component usage across the project
+
+TARGET AUDIENCE:
+- Primary AI: Cursor, GitHub Copilot
+- Secondary AI: UI/UX automation tools
+
+REQUIRED SECTIONS:
+
+1. CONTEXT MAP:
+   - Related Files:
+     - tailwind.config.ts: Tailwind configuration
+     - components.json: Shadcn UI configuration
+     - src/styles/globals.css: Global styles
+     - src/theme/ThemeToggle.tsx: Theme switcher
+   - Dependencies:
+     - tailwindcss
+     - shadcn/ui
+     - tailwindcss-animate
+     - lucide-react
+
+2. STYLING PATTERNS:
+   - Theme Configuration:
+     - Color Scheme: HSL variables in globals.css
+     - Dark Mode: Class-based with next-themes
+     - Component Variants: Defined in tailwind.config.ts
+   - Component Styling:
+     - Base Components: src/ui/*.tsx
+     - Custom Components: Use cn utility for class merging
+     - Animations: Use tailwindcss-animate plugin
+
+3. MODIFICATION RULES:
+   - When adding new UI components:
+     1. Use shadcn/ui CLI for base components
+     2. Place custom components in appropriate directory
+     3. Follow component styling pattern:
+        - Use CSS variables for theming
+        - Implement responsive design
+        - Include proper aria attributes
+   - When modifying themes:
+     1. Update color variables in globals.css
+     2. Test in both light and dark modes
+     3. Verify component contrast ratios
+   - Common errors to avoid:
+     - Incorrect: Hardcoding colors
+     - Correct: Use CSS variables
+     - Incorrect: Missing responsive design
+     - Correct: Use Tailwind breakpoints
+   - Files to delete:
+     - Remove unused component styles
+     - Clean up deprecated theme files
+
+4. AI-SPECIFIC METADATA:
+   - Project Type: #ui #tailwind #shadcn
+   - Key Style Categories:
+     - Colors and Typography
+     - Layout and Spacing
+     - Animations and Transitions
+     - Component Variants
+
+REALISTIC EXAMPLE:
+```tsx
+// Example of proper component styling
+import { cn } from '@/styles'
+
+interface ButtonProps {
+  variant?: 'primary' | 'secondary'
+  size?: 'sm' | 'md' | 'lg'
+  className?: string
+}
+
+export function Button({ variant = 'primary', size = 'md', className }: ButtonProps) {
+  return (
+    <button
+      className={cn(
+        'rounded-md transition-colors',
+        variant === 'primary' && 'bg-primary text-primary-foreground',
+        variant === 'secondary' && 'bg-secondary text-secondary-foreground',
+        size === 'sm' && 'px-3 py-1.5 text-sm',
+        size === 'md' && 'px-4 py-2 text-base',
+        size === 'lg' && 'px-6 py-3 text-lg',
+        className
+      )}
+    />
+  )
+}
+```

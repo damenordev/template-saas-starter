@@ -1,0 +1,88 @@
+[types.txt]
+
+PURPOSE:
+- Document type and interface naming conventions
+- Enable consistent type definitions across the project
+
+TARGET AUDIENCE:
+- Primary AI: Cursor, GitHub Copilot
+- Secondary AI: TypeScript type checking bots
+
+REQUIRED SECTIONS:
+
+1. CONTEXT MAP:
+   - Related Files:
+     - src/types/index.ts: Central type exports
+     - src/types/layout.types.ts: Layout-specific types
+     - tsconfig.json: TypeScript configuration
+   - Dependencies:
+     - typescript
+     - @types/react
+     - @types/node
+
+2. TYPE PATTERNS:
+   - Interface Naming:
+     - Props: Suffix with 'Props' (e.g., ButtonProps)
+     - Components: Prefix with 'I' (e.g., IButton)
+     - API Responses: Suffix with 'Response' (e.g., AuthResponse)
+     - API Requests: Suffix with 'Request' (e.g., LoginRequest)
+     - Database Models: Suffix with 'Model' (e.g., UserModel)
+   - Type Aliases:
+     - Utility Types: Prefix with 'T' (e.g., TTheme)
+     - Enums: No prefix/suffix, PascalCase (e.g., ButtonVariant)
+     - Union Types: Descriptive PascalCase (e.g., ColorScheme)
+
+3. MODIFICATION RULES:
+   - When adding new types:
+     1. Place in appropriate src/types/ subdirectory
+     2. Export via src/types/index.ts
+     3. Follow naming convention pattern:
+        - Use PascalCase for type names
+        - Add appropriate prefix/suffix
+        - Include JSDoc comments for complex types
+   - When creating component props:
+     1. Define interface above component
+     2. Export if reused elsewhere
+     3. Include proper type annotations
+   - Common errors to avoid:
+     - Incorrect: Using 'any' type
+     - Correct: Define specific types or use 'unknown'
+     - Incorrect: Missing type exports
+     - Correct: Export all shared types
+   - Files to delete:
+     - Remove .d.ts files when types are moved to proper modules
+     - Clean up unused type definitions
+
+4. AI-SPECIFIC METADATA:
+   - Project Type: #typescript #react #next
+   - Key Type Categories:
+     - Component Props
+     - API Contracts
+     - Database Models
+     - Utility Types
+
+REALISTIC EXAMPLE:
+```typescript
+// Example of proper type definitions
+import { ReactNode } from 'react'
+
+// Component interface
+export interface ButtonProps {
+  children: ReactNode
+  variant?: 'primary' | 'secondary'
+  onClick?: () => void
+}
+
+// API contract
+export interface LoginRequest {
+  email: string
+  password: string
+}
+
+// Database model
+export interface UserModel {
+  id: string
+  email: string
+  createdAt: Date
+}
+```
