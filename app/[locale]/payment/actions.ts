@@ -1,8 +1,7 @@
 'use server'
 
-import { auth } from '@/lib/auth'
+import { auth } from '@/lib/auth/auth'
 import { redirect } from 'next/navigation'
-import { stripe } from '@/lib/stripe/stripe.server'
 
 export async function createPaymentIntent(amount: number) {
   const session = await auth()
@@ -11,18 +10,19 @@ export async function createPaymentIntent(amount: number) {
     redirect('/auth/signin')
   }
 
-  try {
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount,
-      currency: 'usd',
-      metadata: {
-        userId: session.user.id,
-      },
-    })
+  const response = await fetch('/api/stripe/create-payment-intent', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ amount }),
+  })
 
-    return paymentIntent.client_secret
-  } catch (error) {
-    console.error('Payment intent creation error:', error)
-    throw new Error('Failed to create payment intent. Please try again later.')
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => null)
+    throw new Error(errorData?.message || 'Failed to create payment intent. Please ensure you are logged in.')
   }
+
+  const data = await response.json()
+  return data.clientSecret
 }
